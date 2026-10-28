@@ -1,4 +1,8 @@
+## 🚀 Live Demo
 
+View the live project here:
+
+[Student Performance Dashboard](https://rajnikumari-cse.github.io/student-performance-dashboard/)
 # 📊 Student Performance Dashboard
 
 A responsive web-based dashboard designed to display student academic performance, attendance, subject-wise marks, and performance status in one place.
