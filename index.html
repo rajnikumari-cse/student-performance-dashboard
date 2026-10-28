@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <span>Student<span class="brand-light">Hub</span></span>
+        </div>
+
+        <p class="menu-label">MAIN MENU</p>
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-link active">▦ <span>Dashboard</span></a>
+            <a href="#students" class="nav-link">♙ <span>Students</span></a>
+            <a href="#performance" class="nav-link">▥ <span>Performance</span></a>
+            <a href="#about" class="nav-link">ⓘ <span>About</span></a>
+            <a href="#contact" class="nav-link">✉ <span>Contact</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="profile-avatar">RK</div>
+            <div>
+                <strong>Dashboard Admin</strong>
+                <small>Student Analytics</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">OVERVIEW</p>
+                <h1>Student Performance</h1>
+                <p class="muted">Welcome back! Here's your academic overview.</p>
+            </div>
+            <div class="date-chip" id="current-date">Academic Dashboard</div>
+        </header>
+
+        <section class="summary-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Performance Summary</h2>
+                    <p class="muted">A quick look at student progress</p>
+                </div>
+                <span class="live-label"><span class="live-dot"></span> Overview</span>
+            </div>
+
+            <div class="summary-cards">
+                <article class="summary-card">
+                    <div class="card-top">
+                        <span class="card-icon purple">♙</span>
+                        <span class="card-tag">Students</span>
+                    </div>
+                    <p class="card-title">Total Students</p>
+                    <h3 class="card-value">120</h3>
+                    <p class="card-note">Students enrolled</p>
+                </article>
+
+                <article class="summary-card">
+                    <div class="card-top">
+                        <span class="card-icon blue">▥</span>
+                        <span class="card-tag">Academic</span>
+                    </div>
+                    <p class="card-title">Average Marks</p>
+                    <h3 class="card-value">76%</h3>
+                    <p class="card-note">Overall class average</p>
+                </article>
+
+                <article class="summary-card">
+                    <div class="card-top">
+                        <span class="card-icon green">✓</span>
+                        <span class="card-tag">Attendance</span>
+                    </div>
+                    <p class="card-title">Attendance</p>
+                    <h3 class="card-value">84%</h3>
+                    <div class="mini-progress"><span style="width:84%"></span></div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="card-top">
+                        <span class="card-icon orange">★</span>
+                        <span class="card-tag">Results</span>
+                    </div>
+                    <p class="card-title">Pass Percentage</p>
+                    <h3 class="card-value">91%</h3>
+                    <div class="mini-progress orange-progress"><span style="width:91%"></span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-grid" id="performance">
+            <article class="panel subject-panel">
+                <div class="section-heading">
+                    <div>
+                        <h2>Subject Performance</h2>
+                        <p class="muted">Average score by subject</p>
+                    </div>
+                    <span class="small-badge">4 Subjects</span>
+                </div>
+
+                <div class="subject-row">
+                    <div class="subject-info"><span>HTML &amp; CSS</span><strong>82%</strong></div>
+                    <div class="progress-track"><div class="progress-fill purple-fill" style="width:82%"></div></div>
+                </div>
+                <div class="subject-row">
+                    <div class="subject-info"><span>Python</span><strong>78%</strong></div>
+                    <div class="progress-track"><div class="progress-fill blue-fill" style="width:78%"></div></div>
+                </div>
+                <div class="subject-row">
+                    <div class="subject-info"><span>SQL</span><strong>74%</strong></div>
+                    <div class="progress-track"><div class="progress-fill orange-fill" style="width:74%"></div></div>
+                </div>
+                <div class="subject-row">
+                    <div class="subject-info"><span>Data Analytics</span><strong>80%</strong></div>
+                    <div class="progress-track"><div class="progress-fill green-fill" style="width:80%"></div></div>
+                </div>
+            </article>
+
+            <article class="panel status-panel">
+                <div class="section-heading">
+                    <div>
+                        <h2>Performance Status</h2>
+                        <p class="muted">Based on sample student records</p>
+                    </div>
+                </div>
+
+                <div class="status-item">
+                    <span class="status-symbol excellent">★</span>
+                    <div class="status-text"><strong>Excellent</strong><small>90% marks and above</small></div>
+                    <strong class="status-count" id="excellent-count">1</strong>
+                </div>
+                <div class="status-item">
+                    <span class="status-symbol good">✓</span>
+                    <div class="status-text"><strong>Good</strong><small>80–89% marks</small></div>
+                    <strong class="status-count" id="good-count">2</strong>
+                </div>
+                <div class="status-item">
+                    <span class="status-symbol improve">↗</span>
+                    <div class="status-text"><strong>Needs Improvement</strong><small>Below 80% marks</small></div>
+                    <strong class="status-count" id="improve-count">2</strong>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel students-panel" id="students">
+            <div class="section-heading students-heading">
+                <div>
+                    <h2>Student Details</h2>
+                    <p class="muted">Search and filter the sample student records</p>
+                </div>
+                <span class="small-badge" id="student-count">5 students</span>
+            </div>
+
+            <div class="table-controls">
+                <input type="search" id="student-search" placeholder="Search by student or course..." aria-label="Search students">
+                <select id="performance-filter" aria-label="Filter by performance">
+                    <option value="all">All Performance</option>
+                    <option value="excellent">Excellent (90%+)</option>
+                    <option value="good">Good (80–89%)</option>
+                    <option value="improve">Needs Improvement (below 80%)</option>
+                </select>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Course</th>
+                            <th>Marks</th>
+                            <th>Attendance</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table-body">
+                        <tr data-marks="82">
+                            <td><div class="student-name"><span class="table-avatar">RK</span><strong>Rajni</strong></div></td>
+                            <td>B.Tech IT</td>
+                            <td><strong>82%</strong></td>
+                            <td>88%</td>
+                            <td><span class="status-pill good-pill">Good</span></td>
+                        </tr>
+                        <tr data-marks="76">
+                            <td><div class="student-name"><span class="table-avatar avatar-blue">AM</span><strong>Aman</strong></div></td>
+                            <td>B.Tech CSE</td>
+                            <td><strong>76%</strong></td>
+                            <td>81%</td>
+                            <td><span class="status-pill improve-pill">Needs Improvement</span></td>
+                        </tr>
+                        <tr data-marks="91">
+                            <td><div class="student-name"><span class="table-avatar avatar-pink">PR</span><strong>Priya</strong></div></td>
+                            <td>B.Tech IT</td>
+                            <td><strong>91%</strong></td>
+                            <td>94%</td>
+                            <td><span class="status-pill excellent-pill">Excellent</span></td>
+                        </tr>
+                        <tr data-marks="87">
+                            <td><div class="student-name"><span class="table-avatar avatar-orange">RH</span><strong>Rohit</strong></div></td>
+                            <td>B.Tech CSE</td>
+                            <td><strong>87%</strong></td>
+                            <td>90%</td>
+                            <td><span class="status-pill good-pill">Good</span></td>
+                        </tr>
+                        <tr data-marks="79">
+                            <td><div class="student-name"><span class="table-avatar avatar-green">NH</span><strong>Neha</strong></div></td>
+                            <td>B.Tech IT</td>
+                            <td><strong>79%</strong></td>
+                            <td>85%</td>
+                            <td><span class="status-pill improve-pill">Needs Improvement</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="no-results" class="no-results" hidden>No students found. Try another search.</p>
+            </div>
+            <p class="table-note">Note: This table shows 5 sample records from the dashboard.</p>
+        </section>
+
+        <section class="panel about-panel" id="about">
+            <div class="about-icon">✦</div>
+            <div>
+                <h2>About This Dashboard</h2>
+                <p class="muted">This student performance dashboard presents academic marks, attendance, subject averages and performance categories in one place. Search and filters help users review sample student records easily.</p>
+            </div>
+        </section>
+
+        <section class="panel contact-panel" id="contact">
+            <div class="section-heading">
+                <div>
+                    <h2>Contact Us</h2>
+                    <p class="muted">Have a question? Send us a message.</p>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name</label>
+                        <input id="contact-name" type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input id="contact-email" type="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" rows="4" placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message <span>→</span></button>
+                <p id="form-message" class="form-message" role="status"></p>
+            </form>
+        </section>
+
+        <footer>
+            <p>© 2026 StudentHub Dashboard</p>
+            <p>Student Performance Analytics</p>
+        </footer>
+    </main>
+
+</body>
+</html>
